@@ -11,21 +11,23 @@ url="http://www.totvs.com">
 <Properties>
 	<PropertyGroup name="Text">
 		<Property name="textFont" type="Font" displayName="Default Font">"Arial Narrow", Arial, Helvetica, sans-serif|400|normal|14px</Property>
-		<Property name="textColor" type="Color" displayName="Default Text Color">#333333ff</Property>
+		<Property name="textColorDark" type="Color" displayName="Default Text Color">#000000ff</Property>
+		<Property name="textColorMedium" type="Color" displayName="Default Text Color">#ccccccff</Property>
+		<Property name="textColorLight" type="Color" displayName="Default Text Color">#ffffffff</Property>
 	</PropertyGroup>
 	<PropertyGroup name="Line">
 		<Property name="strokeColor" type="Color" displayName="Default Line Color">#ccccccff</Property>
 		<Property name="strokeStyle" type="StrokeStyle" displayName="Default Line Style">1|</Property>
 	</PropertyGroup>
-	<PropertyGroup name="Colors: Grays">
+	<PropertyGroup name="Colors: Totvs">
 		<Property name="neutral" type="Color" displayName="Neutral">#ffffffff</Property>
-		<Property name="grayDarker" type="Color" displayName="gray-darker">#222222ff</Property>
-		<Property name="grayDark" type="Color" displayName="gray-dark">#050505ff</Property>
+		<Property name="totvsDarker" type="Color" displayName="totvs-darker">#6e7d81ff</Property>
+		<Property name="totvsDark" type="Color" displayName="totvs-dark">#ebebebff</Property>
 	</PropertyGroup>
-	<PropertyGroup name="Colors: Grays (cont.)">
-		<Property name="gray" type="Color" displayName="gray">#545454ff</Property>
-		<Property name="grayLight" type="Color" displayName="gray-light">#777777ff</Property>
-		<Property name="grayLighter" type="Color" displayName="gray-lighter">#eeeeeeff</Property>
+	<PropertyGroup name="Colors: Totvs (cont.)">
+		<Property name="totvs" type="Color" displayName="totvs">#065569ff</Property>
+		<Property name="totvsLight" type="Color" displayName="totvs-light">#0a728cff</Property>
+		<Property name="totvsLighter" type="Color" displayName="totvs-lighter">#2ca8c7ff</Property>
 	</PropertyGroup>
 	<PropertyGroup name="Colors: Brand">
 		<Property name="brandPrimary" type="Color" displayName="brand-primary">#35acc9ff</Property>
@@ -191,7 +193,7 @@ url="http://www.totvs.com">
 
 	]]>
 </Script>
-<Shape id="Navbar" displayName="Navbar" icon="Icons/Navbar.png">
+<Shape id="Navbar" displayName="Navbar(round)" icon="Icons/Navbar.png">
 	<Properties>
 		<PropertyGroup>
 			<Property name="box" type="Dimension">1024,40</Property>
@@ -200,7 +202,7 @@ url="http://www.totvs.com">
 			<Property name="radius" displayName="Corner Radius" type="Handle" p:lockY="true" p:minX="0" p:maxX="$box.h / 2" p:noScale="true">4,0</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
-			<Property name="fillColor" displayName="Color" type="Color">#096a82ff</Property>
+			<Property name="fillColor" displayName="Color" type="Color">$$totvs</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
 			<Property name="strokeColor" displayName="Border Color" type="Color"><E>$$strokeColor</E></Property>
@@ -238,17 +240,17 @@ url="http://www.totvs.com">
 	<PropertyValue name="fullWidth">true</PropertyValue>
 </Shortcut>
 
-<Shortcut displayName="Navbar (inverse)" icon="Icons/NavbarInverse.png" to="Navbar">
-	<PropertyValue name="fillColor"><E>$$grayDarker</E></PropertyValue>
+<Shortcut displayName="Navbar (round,inverse)" icon="Icons/header.png" to="Navbar">
+	<PropertyValue name="fillColor"><E>$$totvsDark</E></PropertyValue>
 </Shortcut>
 
-<Shortcut displayName="Navbar (full-width, inverse)" icon="Icons/NavbarFullInverse.png" to="Navbar">
-	<PropertyValue name="fillColor"><E>$$grayDarker</E></PropertyValue>
+<Shortcut displayName="Navbar (full-width, inverse)" icon="Icons/header.png" to="Navbar">
+	<PropertyValue name="fillColor"><E>$$totvsDark</E></PropertyValue>
 	<PropertyValue name="radius">0,0</PropertyValue>
 	<PropertyValue name="fullWidth">true</PropertyValue>
 </Shortcut>
 
-<Shape id="Button" displayName="Button" icon="Icons/Button.png">
+<Shape id="Button" displayName="Button (active)" icon="Icons/Button.png">
 	<Properties>
 		<PropertyGroup>
 			<Property name="box" type="Dimension">71,34</Property>
@@ -258,11 +260,11 @@ url="http://www.totvs.com">
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[Button]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$textColor</E></Property>
+			<Property name="textColor" displayName="Text Color" type="Color"><E>$$textColorLight</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">1,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
-			<Property name="fillColor" displayName="Color" type="Color"><E>$$neutral</E></Property>
+			<Property name="fillColor" displayName="Color" type="Color"><E>$$totvsLighter</E></Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
 			<Property name="strokeColor" displayName="Border Color" type="Color"><E>$$strokeColor</E></Property>
@@ -358,9 +360,9 @@ url="http://www.totvs.com">
 	</p:Content>
 </Shape>
 
-<Shortcut displayName="Button (primary)" icon="Icons/ButtonPrimary.png" to="Button">
-	<PropertyValue name="fillColor"><E>$$brandPrimary</E></PropertyValue>
-	<PropertyValue name="textColor">#FFFFFF</PropertyValue>
+<Shortcut displayName="Button (clean)" icon="Icons/Button.png" to="Button">
+	<PropertyValue name="fillColor"><E>$$totvsDark</E></PropertyValue>
+	<PropertyValue name="textColor">$$textColorMedium</PropertyValue>
 </Shortcut>
 
 <Shape id="dropdown" displayName="Dropdown" icon="Icons/Dropdown.png">
