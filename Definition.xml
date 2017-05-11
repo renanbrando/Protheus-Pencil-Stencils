@@ -11,9 +11,9 @@ url="http://www.totvs.com">
 <Properties>
 	<PropertyGroup name="Text">
 		<Property name="textFont" type="Font" displayName="Default Font">"Arial Narrow", Arial, Helvetica, sans-serif|400|normal|14px</Property>
-		<Property name="textColorDark" type="Color" displayName="Default Text Color">#000000ff</Property>
-		<Property name="textColorMedium" type="Color" displayName="Default Text Color">#ccccccff</Property>
-		<Property name="textColorLight" type="Color" displayName="Default Text Color">#ffffffff</Property>
+		<Property name="textColorDark" type="Color" displayName="Default Text Dark Color">#000000ff</Property>
+		<Property name="textColorMedium" type="Color" displayName="Default Text Medium Color">#ccccccff</Property>
+		<Property name="textColorLight" type="Color" displayName="Default Text Light Color">#ffffffff</Property>
 	</PropertyGroup>
 	<PropertyGroup name="Line">
 		<Property name="strokeColor" type="Color" displayName="Default Line Color">#ccccccff</Property>
@@ -21,22 +21,22 @@ url="http://www.totvs.com">
 	</PropertyGroup>
 	<PropertyGroup name="Colors: Totvs">
 		<Property name="neutral" type="Color" displayName="Neutral">#ffffffff</Property>
-		<Property name="totvsDarker" type="Color" displayName="totvs-darker">#6e7d81ff</Property>
-		<Property name="totvsDark" type="Color" displayName="totvs-dark">#ebebebff</Property>
+		<Property name="totvsDarker" type="Color" displayName="Totvs-darker">#6e7d81ff</Property>
+		<Property name="totvsDark" type="Color" displayName="Totvs-dark">#ebebebff</Property>
 	</PropertyGroup>
 	<PropertyGroup name="Colors: Totvs (cont.)">
-		<Property name="totvs" type="Color" displayName="totvs">#065569ff</Property>
-		<Property name="totvsLight" type="Color" displayName="totvs-light">#0a728cff</Property>
-		<Property name="totvsLighter" type="Color" displayName="totvs-lighter">#2ca8c7ff</Property>
+		<Property name="totvs" type="Color" displayName="Totvs">#065569ff</Property>
+		<Property name="totvsLight" type="Color" displayName="Totvs-light">#0a728cff</Property>
+		<Property name="totvsLighter" type="Color" displayName="Totvs-lighter">#2ca8c7ff</Property>
 	</PropertyGroup>
 	<PropertyGroup name="Colors: Brand">
-		<Property name="brandPrimary" type="Color" displayName="brand-primary">#35acc9ff</Property>
-		<Property name="brandSuccess" type="Color" displayName="brand-success">#5cb85cff</Property>
-		<Property name="brandInfo" type="Color" displayName="brand-info">#5bc0deff</Property>
+		<Property name="totvsPrimary" type="Color" displayName="Totvs-primary">#35acc9ff</Property>
+		<Property name="totvsSuccess" type="Color" displayName="Totvs-success">#5cb85cff</Property>
+		<Property name="totvsInfo" type="Color" displayName="Totvs-info">#5bc0deff</Property>
 	</PropertyGroup>
 	<PropertyGroup name="Colors: Brand (cont.)">
-		<Property name="brandWarning" type="Color" displayName="brand-warning">#f0ad4eff</Property>
-		<Property name="brandDanger" type="Color" displayName="brand-danger">#d9534fff</Property>
+		<Property name="totvsWarning" type="Color" displayName="Totvs-warning">#f0ad4eff</Property>
+		<Property name="totvsDanger" type="Color" displayName="Totvs-danger">#d9534fff</Property>
 	</PropertyGroup>
 </Properties>
 
@@ -202,7 +202,7 @@ url="http://www.totvs.com">
 			<Property name="radius" displayName="Corner Radius" type="Handle" p:lockY="true" p:minX="0" p:maxX="$box.h / 2" p:noScale="true">4,0</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
-			<Property name="fillColor" displayName="Color" type="Color">$$totvs</Property>
+			<Property name="fillColor" displayName="Color" type="Color"><E>$$totvs</E></Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
 			<Property name="strokeColor" displayName="Border Color" type="Color"><E>$$strokeColor</E></Property>
@@ -240,11 +240,11 @@ url="http://www.totvs.com">
 	<PropertyValue name="fullWidth">true</PropertyValue>
 </Shortcut>
 
-<Shortcut displayName="Navbar (round,inverse)" icon="Icons/header.png" to="Navbar">
+<Shortcut displayName="Navbar (round,inverse)" icon="Icons/NavbarInverse.png" to="Navbar">
 	<PropertyValue name="fillColor"><E>$$totvsDark</E></PropertyValue>
 </Shortcut>
 
-<Shortcut displayName="Navbar (full-width, inverse)" icon="Icons/header.png" to="Navbar">
+<Shortcut displayName="Navbar (full-width, inverse)" icon="Icons/NavbarFullInverse.png" to="Navbar">
 	<PropertyValue name="fillColor"><E>$$totvsDark</E></PropertyValue>
 	<PropertyValue name="radius">0,0</PropertyValue>
 	<PropertyValue name="fullWidth">true</PropertyValue>
@@ -371,10 +371,9 @@ url="http://www.totvs.com">
 			<Property name="box" type="Dimension">172,132</Property>
 			<Property name="shadow" displayName="Shadow" type="Bool">true</Property>
 		</PropertyGroup>
-
 		<PropertyGroup name="Background">
-			<Property name="fillColor" displayName="Sheet Color" type="Color">#ffffffff</Property>
-			<Property name="selectedColor" displayName="Selected Color" type="Color">#f5f5f5ff</Property>
+			<Property name="fillColor" displayName="Sheet Color" type="Color"><E>$$neutral</E></Property>
+			<Property name="selectedColor" displayName="Selected Color" type="Color"><E><$$totvsDark</E></Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
 			<Property name="strokeColor" displayName="Border Color" type="Color">#00000026</Property>
@@ -387,7 +386,7 @@ Another Item
 --
 _Disabled Item]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$textColor</E></Property>
+			<Property name="textColor" displayName="Text Color" type="Color"><E>$$textColorDark</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">1,1</Property>
 		</PropertyGroup>
 	</Properties>
