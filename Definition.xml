@@ -12,31 +12,31 @@ url="http://www.totvs.com">
 	<PropertyGroup name="Text">
 		<Property name="textFont" type="Font" displayName="Default Font">"Arial Narrow", Arial, Helvetica, sans-serif|400|normal|14px</Property>
 		<Property name="textColorDark" type="Color" displayName="Default Text Dark Color">#000000ff</Property>
-		<Property name="textColorMedium" type="Color" displayName="Default Text Medium Color">#ccccccff</Property>
+		<Property name="textColorMedium" type="Color" displayName="Default Text Color Medium">#ccccccff</Property>
 		<Property name="textColorLight" type="Color" displayName="Default Text Light Color">#ffffffff</Property>
 	</PropertyGroup>
 	<PropertyGroup name="Line">
 		<Property name="strokeColor" type="Color" displayName="Default Line Color">#ccccccff</Property>
 		<Property name="strokeStyle" type="StrokeStyle" displayName="Default Line Style">1|</Property>
 	</PropertyGroup>
-	<PropertyGroup name="Colors: Totvs">
+	<PropertyGroup name="Colors: totvss">
 		<Property name="neutral" type="Color" displayName="Neutral">#ffffffff</Property>
 		<Property name="totvsDarker" type="Color" displayName="Totvs-darker">#6e7d81ff</Property>
 		<Property name="totvsDark" type="Color" displayName="Totvs-dark">#ebebebff</Property>
 	</PropertyGroup>
-	<PropertyGroup name="Colors: Totvs (cont.)">
-		<Property name="totvs" type="Color" displayName="Totvs">#065569ff</Property>
+	<PropertyGroup name="Colors: totvss (cont.)">
+		<Property name="totvs" type="Color" displayName="totvs">#065569ff</Property>
 		<Property name="totvsLight" type="Color" displayName="Totvs-light">#0a728cff</Property>
 		<Property name="totvsLighter" type="Color" displayName="Totvs-lighter">#2ca8c7ff</Property>
 	</PropertyGroup>
 	<PropertyGroup name="Colors: Brand">
-		<Property name="totvsPrimary" type="Color" displayName="Totvs-primary">#35acc9ff</Property>
-		<Property name="totvsSuccess" type="Color" displayName="Totvs-success">#5cb85cff</Property>
-		<Property name="totvsInfo" type="Color" displayName="Totvs-info">#5bc0deff</Property>
+		<Property name="brandPrimary" type="Color" displayName="brand-primary">#337ab7ff</Property>
+		<Property name="brandSuccess" type="Color" displayName="brand-success">#5cb85cff</Property>
+		<Property name="brandInfo" type="Color" displayName="brand-info">#5bc0deff</Property>
 	</PropertyGroup>
 	<PropertyGroup name="Colors: Brand (cont.)">
-		<Property name="totvsWarning" type="Color" displayName="Totvs-warning">#f0ad4eff</Property>
-		<Property name="totvsDanger" type="Color" displayName="Totvs-danger">#d9534fff</Property>
+		<Property name="brandWarning" type="Color" displayName="brand-warning">#f0ad4eff</Property>
+		<Property name="brandDanger" type="Color" displayName="brand-danger">#d9534fff</Property>
 	</PropertyGroup>
 </Properties>
 
@@ -193,7 +193,7 @@ url="http://www.totvs.com">
 
 	]]>
 </Script>
-<Shape id="Navbar" displayName="Navbar(round)" icon="Icons/Navbar.png">
+<Shape id="Navbar" displayName="Navbar" icon="Icons/Navbar.png">
 	<Properties>
 		<PropertyGroup>
 			<Property name="box" type="Dimension">1024,40</Property>
@@ -240,31 +240,31 @@ url="http://www.totvs.com">
 	<PropertyValue name="fullWidth">true</PropertyValue>
 </Shortcut>
 
-<Shortcut displayName="Navbar (round,inverse)" icon="Icons/NavbarInverse.png" to="Navbar">
-	<PropertyValue name="fillColor"><E>$$totvsDark</E></PropertyValue>
+<Shortcut displayName="Navbar (inverse)" icon="Icons/NavbarInverse.png" to="Navbar">
+	<PropertyValue name="fillColor"><E>$$totvsDarker</E></PropertyValue>
 </Shortcut>
 
 <Shortcut displayName="Navbar (full-width, inverse)" icon="Icons/NavbarFullInverse.png" to="Navbar">
-	<PropertyValue name="fillColor"><E>$$totvsDark</E></PropertyValue>
+	<PropertyValue name="fillColor"><E>$$totvsDarker</E></PropertyValue>
 	<PropertyValue name="radius">0,0</PropertyValue>
 	<PropertyValue name="fullWidth">true</PropertyValue>
 </Shortcut>
 
-<Shape id="Button" displayName="Button (active)" icon="Icons/Button.png">
+<Shape id="Button" displayName="Button" icon="Icons/Button.png">
 	<Properties>
 		<PropertyGroup>
-			<Property name="box" type="Dimension">71,34</Property>
+			<Property name="box" type="Dimension">70,30</Property>
 			<Property name="smartColor" displayName="Automatic border color" type="Bool">true</Property>
 			<Property name="radius" displayName="Corner Radius" type="Handle" p:lockY="true" p:minX="0" p:maxX="$box.h / 2" p:noScale="true">4,0</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[Button]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$textColorLight</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorDark</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">1,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
-			<Property name="fillColor" displayName="Color" type="Color"><E>$$totvsLighter</E></Property>
+			<Property name="fillColor" displayName="Color" type="Color"><E>$$totvsDark</E></Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
 			<Property name="strokeColor" displayName="Border Color" type="Color"><E>$$strokeColor</E></Property>
@@ -320,8 +320,8 @@ url="http://www.totvs.com">
 		</For>
 		<For ref="text">
 			<Font>$textFont</Font>
-			<Fill>$textColor</Fill>
-			<Color>$textColor</Color>
+			<Fill>$textColorMedium</Fill>
+			<Color>$textColorMedium</Color>
 			<PlainTextContent>
 				<Arg>$textContent</Arg>
 				<Arg>
@@ -341,7 +341,7 @@ url="http://www.totvs.com">
 		<For ref="arrow">
 			<Visibility>$dropdown.value != "none"</Visibility>
 			<D>"M " + ($box.w - ($dropdown.value == "split" ? 17 : 20)) + "," + (($box.h / 2) + ($dropdownDirection.value * -2)) + " l 8,0 l -4," + ($dropdownDirection.value * 4) + " Z"</D>
-			<Fill>$textColor</Fill>
+			<Fill>$textColorMedium</Fill>
 		</For>
 		<For ref="split">
 			<Visibility>$dropdown.value == "split"</Visibility>
@@ -360,9 +360,29 @@ url="http://www.totvs.com">
 	</p:Content>
 </Shape>
 
-<Shortcut displayName="Button (clean)" icon="Icons/Button.png" to="Button">
-	<PropertyValue name="fillColor"><E>$$totvsDark</E></PropertyValue>
-	<PropertyValue name="textColor">$$textColorMedium</PropertyValue>
+<Shortcut displayName="Button (primary)" icon="Icons/ButtonPrimary.png" to="Button">
+	<PropertyValue name="fillColor"><E>$$totvsLighter</E></PropertyValue>
+	<PropertyValue name="textColorMedium"><E>$$textColorLight</E></PropertyValue>
+</Shortcut>
+
+<Shortcut displayName="Button (success)" icon="Icons/ButtonSuccess.png" to="Button">
+	<PropertyValue name="fillColor"><E>$$brandSuccess</E></PropertyValue>
+	<PropertyValue name="textColorMedium">#FFFFFF</PropertyValue>
+</Shortcut>
+
+<Shortcut displayName="Button (info)" icon="Icons/ButtonInfo.png" to="Button">
+	<PropertyValue name="fillColor"><E>$$brandInfo</E></PropertyValue>
+	<PropertyValue name="textColorMedium">#FFFFFF</PropertyValue>
+</Shortcut>
+
+<Shortcut displayName="Button (warning)" icon="Icons/ButtonWarning.png" to="Button">
+	<PropertyValue name="fillColor"><E>$$brandWarning</E></PropertyValue>
+	<PropertyValue name="textColorMedium">#FFFFFF</PropertyValue>
+</Shortcut>
+
+<Shortcut displayName="Button (danger)" icon="Icons/ButtonDanger.png" to="Button">
+	<PropertyValue name="fillColor"><E>$$brandDanger</E></PropertyValue>
+	<PropertyValue name="textColorMedium">#FFFFFF</PropertyValue>
 </Shortcut>
 
 <Shape id="dropdown" displayName="Dropdown" icon="Icons/Dropdown.png">
@@ -371,9 +391,10 @@ url="http://www.totvs.com">
 			<Property name="box" type="Dimension">172,132</Property>
 			<Property name="shadow" displayName="Shadow" type="Bool">true</Property>
 		</PropertyGroup>
+
 		<PropertyGroup name="Background">
-			<Property name="fillColor" displayName="Sheet Color" type="Color"><E>$$neutral</E></Property>
-			<Property name="selectedColor" displayName="Selected Color" type="Color"><E><$$totvsDark</E></Property>
+			<Property name="fillColor" displayName="Sheet Color" type="Color">#ffffffff</Property>
+			<Property name="selectedColor" displayName="Selected Color" type="Color">#f5f5f5ff</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
 			<Property name="strokeColor" displayName="Border Color" type="Color">#00000026</Property>
@@ -386,7 +407,7 @@ Another Item
 --
 _Disabled Item]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$textColorDark</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorMedium</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">1,1</Property>
 		</PropertyGroup>
 	</Properties>
@@ -432,10 +453,10 @@ _Disabled Item]]></Property>
 
 						if (text.match(/^_(.*)/)) {	// Disabled item
 							text = RegExp.$1;
-							css.set("color", collection.lighten($textColor, 28).toRGBString());
+							css.set("color", collection.lighten($textColorMedium, 28).toRGBString());
 						} else if (text.match(/^#(.*)/)) {	// Header item
 							text = RegExp.$1;
-							css.set("color", collection.lighten($textColor, 28).toRGBString());
+							css.set("color", collection.lighten($textColorMedium, 28).toRGBString());
 							css.set("font-size", ($textFont.getPixelHeight() * 0.86) + "px");
 						} else if (text.match(/(.*)\*$/)) {	// Selected item
 							text = RegExp.$1;
@@ -455,7 +476,7 @@ _Disabled Item]]></Property>
 				]]>
 			</DomContent>
 
-			<Color>$textColor</Color>
+			<Color>$textColorMedium</Color>
 		</For>
 	</Behaviors>
 
@@ -507,7 +528,7 @@ _Disabled Item]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$gray</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$totvs</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
@@ -559,8 +580,8 @@ _Disabled Item]]></Property>
 
 		<For ref="text">
 			<Font>$textFont</Font>
-			<Fill>$textColor</Fill>
-			<Color>$textColor</Color>
+			<Fill>$textColorMedium</Fill>
+			<Color>$textColorMedium</Color>
 			<PlainTextContent>
 				<Arg>$textContent</Arg>
 				<Arg>Bound.fromBox($box, 12, 6)</Arg>
@@ -624,14 +645,14 @@ _Disabled Item]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[Checkbox]]></Property>
 			<Property name="textFont" displayName="Text Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$gray</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$totvs</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
 			<Property name="fillColor" displayName="Color" type="Color">#ffffff00</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Check Mark">
-			<Property name="checkColor" displayName="Check Color" type="Color"><E>$$gray</E></Property>
+			<Property name="checkColor" displayName="Check Color" type="Color"><E>$$totvs</E></Property>
 			<Property name="checked" displayName="Checked" type="Bool">false</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
@@ -656,8 +677,8 @@ _Disabled Item]]></Property>
 		</For>
 		<For ref="text">
 			<Font>$textFont</Font>
-			<Fill>$textColor</Fill>
-			<Color>$textColor</Color>
+			<Fill>$textColorMedium</Fill>
+			<Color>$textColorMedium</Color>
 			<TextContent>$textContent</TextContent>
 			<BoxFit>
 				<Arg>new Bound(22, 0, $box.w - 22, $box.h)</Arg>
@@ -684,14 +705,14 @@ _Disabled Item]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[Radio]]></Property>
 			<Property name="textFont" displayName="Text Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$gray</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$totvs</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
 			<Property name="fillColor" displayName="Color" type="Color">#ffffff00</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Dot">
-			<Property name="checkColor" displayName="Dot Color" type="Color"><E>$$gray</E></Property>
+			<Property name="checkColor" displayName="Dot Color" type="Color"><E>$$totvs</E></Property>
 			<Property name="checked" displayName="Selected" type="Bool">false</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
@@ -719,8 +740,8 @@ _Disabled Item]]></Property>
 		</For>
 		<For ref="text">
 			<Font>$textFont</Font>
-			<Fill>$textColor</Fill>
-			<Color>$textColor</Color>
+			<Fill>$textColorMedium</Fill>
+			<Color>$textColorMedium</Color>
 			<TextContent>$textContent</TextContent>
 			<BoxFit>
 				<Arg>new Bound(22, 0, $box.w - 22, $box.h)</Arg>
@@ -746,11 +767,11 @@ _Disabled Item]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[Label]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font">"Helvetica Neue", Helvetica, Arial, sans-serif|bold|normal|10px</Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$neutral</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$neutral</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">1,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
-			<Property name="fillColor" displayName="Color" type="Color"><E>$$grayLight</E></Property>
+			<Property name="fillColor" displayName="Color" type="Color"><E>$$totvsLight</E></Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
 			<Property name="strokeColor" displayName="Border Color" type="Color"><E>$$strokeColor</E></Property>
@@ -770,8 +791,8 @@ _Disabled Item]]></Property>
 		</For>
 		<For ref="text">
 			<Font>$textFont</Font>
-			<Fill>$textColor</Fill>
-			<Color>$textColor</Color>
+			<Fill>$textColorMedium</Fill>
+			<Color>$textColorMedium</Color>
 			<PlainTextContent>
 				<Arg>$textContent</Arg>
 				<Arg>Bound.fromBox($box, 6, 3)</Arg>
@@ -808,7 +829,7 @@ _Disabled Item]]></Property>
 </Shortcut>
 
 <Shortcut displayName="Badge" icon="Icons/Badge.png" to="Label">
-	<PropertyValue name="fillColor"><E>$$grayLight</E></PropertyValue>
+	<PropertyValue name="fillColor"><E>$$totvsLight</E></PropertyValue>
 	<PropertyValue name="radius">18,0</PropertyValue>
 	<PropertyValue name="box">28,18</PropertyValue>
 	<PropertyValue name="textContent"><![CDATA[42]]></PropertyValue>
@@ -830,7 +851,7 @@ _Disabled Item]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[Tab]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$textColor</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorMedium</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">1,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
@@ -859,8 +880,8 @@ _Disabled Item]]></Property>
 		</For>
 		<For ref="text">
 			<Font>$textFont</Font>
-			<Fill>$textColor</Fill>
-			<Color>$textColor</Color>
+			<Fill>$textColorMedium</Fill>
+			<Color>$textColorMedium</Color>
 			<PlainTextContent>
 				<Arg>$textContent</Arg>
 				<Arg>
@@ -872,7 +893,7 @@ _Disabled Item]]></Property>
 		<For ref="arrow">
 			<Visibility>$dropdown.value</Visibility>
 			<D>"M " + ($box.w - 20) + "," + (($box.h / 2) + ($dropdownDirection.value * -2)) + " l 8,0 l -4," + ($dropdownDirection.value * 4) + " Z"</D>
-			<Fill>$textColor</Fill>
+			<Fill>$textColorMedium</Fill>
 		</For>
 	</Behaviors>
 
@@ -886,7 +907,7 @@ _Disabled Item]]></Property>
 <Shortcut displayName="Tab (Unselected)" icon="Icons/TabUnselected.png" to="Tab">
 	<PropertyValue name="strokeStyle">0|</PropertyValue>
 	<PropertyValue name="selected">false</PropertyValue>
-	<PropertyValue name="textColor"><E>$$brandPrimary</E></PropertyValue>
+	<PropertyValue name="textColorMedium"><E>$$brandPrimary</E></PropertyValue>
 </Shortcut>
 
 <Shape id="PillTab" displayName="Pill Tab" icon="Icons/PillTab.png">
@@ -901,7 +922,7 @@ _Disabled Item]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[Label]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$neutral</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$neutral</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">1,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
@@ -925,8 +946,8 @@ _Disabled Item]]></Property>
 		</For>
 		<For ref="text">
 			<Font>$textFont</Font>
-			<Fill>$textColor</Fill>
-			<Color>$textColor</Color>
+			<Fill>$textColorMedium</Fill>
+			<Color>$textColorMedium</Color>
 			<PlainTextContent>
 				<Arg>$textContent</Arg>
 				<Arg>
@@ -938,7 +959,7 @@ _Disabled Item]]></Property>
 		<For ref="arrow">
 			<Visibility>$dropdown.value</Visibility>
 			<D>"M " + ($box.w - 20) + "," + (($box.h / 2) + ($dropdownDirection.value * -2)) + " l 8,0 l -4," + ($dropdownDirection.value * 4) + " Z"</D>
-			<Fill>$textColor</Fill>
+			<Fill>$textColorMedium</Fill>
 		</For>
 	</Behaviors>
 
@@ -951,33 +972,33 @@ _Disabled Item]]></Property>
 </Shape>
 
 <Shortcut displayName="Pill Tab (Unselected)" icon="Icons/PillTabUnselected.png" to="PillTab">
-	<PropertyValue name="textColor"><E>$$brandPrimary</E></PropertyValue>
+	<PropertyValue name="textColorMedium"><E>$$brandPrimary</E></PropertyValue>
 	<PropertyValue name="fillColor">#ffffff00</PropertyValue>
 </Shortcut>
 
 <Shortcut displayName="Nav Item (selected)" icon="Icons/NavItemSelected.png" to="PillTab">
-	<PropertyValue name="textColor"><E>$$gray</E></PropertyValue>
+	<PropertyValue name="textColorMedium"><E>$$totvs</E></PropertyValue>
 	<PropertyValue name="fillColor">#e7e7e7ff</PropertyValue>
 	<PropertyValue name="radius">0,0</PropertyValue>
 	<PropertyValue name="box">67,50</PropertyValue>
 </Shortcut>
 
 <Shortcut displayName="Nav Item (selected, inverse)" icon="Icons/NavItemSelectedInverse.png" to="PillTab">
-	<PropertyValue name="textColor"><E>$$neutral</E></PropertyValue>
-	<PropertyValue name="fillColor"><E>$$grayDark</E></PropertyValue>
+	<PropertyValue name="textColorMedium"><E>$$neutral</E></PropertyValue>
+	<PropertyValue name="fillColor"><E>$$totvsDark</E></PropertyValue>
 	<PropertyValue name="radius">0,0</PropertyValue>
 	<PropertyValue name="box">67,50</PropertyValue>
 </Shortcut>
 
 <Shortcut displayName="Nav Item (unselected)" icon="Icons/NavItemUnselected.png" to="PillTab">
-	<PropertyValue name="textColor"><E>$$gray</E></PropertyValue>
+	<PropertyValue name="textColorMedium"><E>$$totvs</E></PropertyValue>
 	<PropertyValue name="fillColor">#e7e7e700</PropertyValue>
 	<PropertyValue name="radius">0,0</PropertyValue>
 	<PropertyValue name="box">67,50</PropertyValue>
 </Shortcut>
 
 <Shortcut displayName="Nav Item (unselected, inverse)" icon="Icons/NavItemUnselectedInverse.png" to="PillTab">
-	<PropertyValue name="textColor"><E>$$neutral</E></PropertyValue>
+	<PropertyValue name="textColorMedium"><E>$$neutral</E></PropertyValue>
 	<PropertyValue name="fillColor">transparent</PropertyValue>
 	<PropertyValue name="radius">0,0</PropertyValue>
 	<PropertyValue name="box">67,50</PropertyValue>
@@ -994,7 +1015,7 @@ _Disabled Item]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="RichText"><![CDATA[<b>Well done!</b> You successfully read this important alert message.]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$textColor</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorMedium</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
@@ -1019,7 +1040,7 @@ _Disabled Item]]></Property>
 		<For ref="text">
 			<Box>$box</Box>
 			<Font>$textFont</Font>
-			<Color>$smartColor.value ? collection.darken($fillColor, 56) : $textColor</Color>
+			<Color>$smartColor.value ? collection.darken($fillColor, 56) : $textColorMedium</Color>
 			<TextContent>$textContent</TextContent>
 			<BoxFit>
 				<Arg>Bound.fromBox($box, 15)</Arg>
@@ -1028,7 +1049,7 @@ _Disabled Item]]></Property>
 		</For>
 		<For ref="close">
 			<Visibility>$dismissible.value</Visibility>
-			<Fill>($smartColor.value ? collection.darken($fillColor, 56) : $textColor).hollowed(0.8)</Fill>
+			<Fill>($smartColor.value ? collection.darken($fillColor, 56) : $textColorMedium).hollowed(0.8)</Fill>
 			<Transform>[translate($box.w - 25, ($box.h - 10) / 2)]</Transform> <!-- x = Box width - 15px padding - 10px (width of x), y = (Box height - x height) / 2 -->
 		</For>
 	</Behaviors>
@@ -1073,7 +1094,7 @@ _Disabled Item]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[Panel title]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font">"Helvetica Neue", Helvetica, Arial, sans-serif|500|normal|16px</Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$textColor</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorMedium</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
@@ -1122,7 +1143,7 @@ _Disabled Item]]></Property>
 		<For ref="text">
 			<Visibility>$heading.value</Visibility>
 			<Font>$textFont</Font>
-			<Color>$smartColor.value ? collection.darken($fillColor, 56) : $textColor</Color>
+			<Color>$smartColor.value ? collection.darken($fillColor, 56) : $textColorMedium</Color>
 			<PlainTextContent>
 				<Arg>$textContent</Arg>
 				<Arg>Bound.fromBox(new Dimension($box.w, $height.y), 15, 10)</Arg>
@@ -1145,7 +1166,7 @@ _Disabled Item]]></Property>
 <Shortcut displayName="Panel (primary)" icon="Icons/PanelPrimary.png" to="Panel">
 	<PropertyValue name="fillColor"><E>$$brandPrimary</E></PropertyValue>
 	<PropertyValue name="strokeColor"><E>$$brandPrimary</E></PropertyValue>
-	<PropertyValue name="textColor">#ffffffff</PropertyValue>
+	<PropertyValue name="textColorMedium">#ffffffff</PropertyValue>
 	<PropertyValue name="smartColor">false</PropertyValue>
 </Shortcut>
 
@@ -1193,7 +1214,7 @@ The Wizard of Oz | Victor Fleming | 1939
 The Third Man | Carol Reed | 1949
 Citizen Kane | Orson Welles | 1941]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$textColor</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorMedium</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 			<Property name="header" displayName="Header" type="Bool">true</Property>
 		</PropertyGroup>
@@ -1210,7 +1231,7 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 		</For>
 
 		<For ref="table">
-			<Color>$textColor</Color>
+			<Color>$textColorMedium</Color>
 			<Font>$textFont</Font>
 
 			<CustomStyle>
@@ -1286,7 +1307,7 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 				]]>
 			</DomContent>
 
-			<Color>$textColor</Color>
+			<Color>$textColorMedium</Color>
 		</For>
 	</Behaviors>
 
@@ -1313,7 +1334,7 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="RichText"><![CDATA[Look, I'm in a well!]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$textColor</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorMedium</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
@@ -1334,8 +1355,8 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 
 		<For ref="text">
 			<Font>$textFont</Font>
-			<Fill>$textColor</Fill>
-			<Color>$textColor</Color>
+			<Fill>$textColorMedium</Fill>
+			<Color>$textColorMedium</Color>
 			<TextContent>$textContent</TextContent>
 			<BoxFit>
 				<Arg>Bound.fromBox($box, $padding.x)</Arg>
@@ -1418,7 +1439,7 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font">"Helvetica Neue", Helvetica, Arial, sans-serif|400|normal|12px</Property>
-			<Property name="textColor" displayName="Text Color" type="Color">#ffffffff</Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color">#ffffffff</Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">1,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
@@ -1455,7 +1476,7 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 
 		<For ref="text">
 			<Font>$textFont</Font>
-			<Color>$textColor</Color>
+			<Color>$textColorMedium</Color>
 			<PlainTextContent>
 				<Arg>$textContent</Arg>
 				<Arg>new Bound(0, 0, $progress.x, $box.h)</Arg>
@@ -1531,7 +1552,7 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[↝ Previous]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$brandPrimary</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$brandPrimary</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">1,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
@@ -1555,8 +1576,8 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 		</For>
 		<For ref="text">
 			<Font>$textFont</Font>
-			<Fill>$textColor</Fill>
-			<Color>$textColor</Color>
+			<Fill>$textColorMedium</Fill>
+			<Color>$textColorMedium</Color>
 			<PlainTextContent>
 				<Arg>$textContent</Arg>
 				<Arg>Bound.fromBox($box, 14, 5)</Arg>
@@ -1588,7 +1609,7 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 			<Property name="textContent" displayName="Text Content" type="PlainText" p:editInfo="({targetName: 'text', bound: Bound.fromBox($box, 15, 8), font: $textFont, align: new Alignment(0, 1), multi: false})"><![CDATA[Home / Library / Data]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
 			<Property name="linkColor" displayName="Link Color" type="Color"><E>$$brandPrimary</E></Property>
-			<Property name="textColor" displayName="Text Color" type="Color"><E>$$grayLight</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$totvsLight</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
@@ -1625,7 +1646,7 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 				css.set("font-decor",$textFont.decor);
 
 				var dividerCss = CSS.fromString(css.toString());
-				dividerCss.set("fill", collection.lighten($textColor, 30).toRGBString());
+				dividerCss.set("fill", collection.lighten($textColorMedium, 30).toRGBString());
 
 				for (var i = 0; i < items.length; i++) {
 					var css = new CSS();
@@ -1636,7 +1657,7 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 						var color = $linkColor;
 
 						if (i == items.length - 1) {
-							color = $textColor;
+							color = $textColorMedium;
 						}
 
 						css.set("fill", color.toRGBString());
