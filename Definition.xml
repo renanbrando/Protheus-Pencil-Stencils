@@ -11,20 +11,23 @@ url="http://www.totvs.com">
 <Properties>
 	<PropertyGroup name="Text">
 		<Property name="textFont" type="Font" displayName="Default Font">"Arial Narrow", Arial, Helvetica, sans-serif|400|normal|14px</Property>
+		<Property name="textFontTitle" type="Font" displayName="Default Font">"Arial Narrow", Arial, Helvetica, sans-serif|400|black|28px</Property>
+		<Property name="textFontSubTitle" type="Font" displayName="Default Font">"Arial Narrow", Arial, Helvetica, sans-serif|400|black|20px</Property>
 		<Property name="textColorDark" type="Color" displayName="Default Text Dark Color">#000000ff</Property>
-		<Property name="textColorMedium" type="Color" displayName="Default Text Color Medium">#ccccccff</Property>
+		<Property name="textColorMedium" type="Color" displayName="Default Text Color Medium">#666666ff</Property>
 		<Property name="textColorLight" type="Color" displayName="Default Text Light Color">#ffffffff</Property>
 	</PropertyGroup>
 	<PropertyGroup name="Line">
 		<Property name="strokeColor" type="Color" displayName="Default Line Color">#ccccccff</Property>
+		<Property name="strokeColorDark" type="Color" displayName="Default Line Color">#000000ff</Property>
 		<Property name="strokeStyle" type="StrokeStyle" displayName="Default Line Style">1|</Property>
 	</PropertyGroup>
-	<PropertyGroup name="Colors: totvss">
+	<PropertyGroup name="Colors: Totvs">
 		<Property name="neutral" type="Color" displayName="Neutral">#ffffffff</Property>
 		<Property name="totvsDarker" type="Color" displayName="Totvs-darker">#6e7d81ff</Property>
 		<Property name="totvsDark" type="Color" displayName="Totvs-dark">#ebebebff</Property>
 	</PropertyGroup>
-	<PropertyGroup name="Colors: totvss (cont.)">
+	<PropertyGroup name="Colors: Totvs (cont.)">
 		<Property name="totvs" type="Color" displayName="totvs">#065569ff</Property>
 		<Property name="totvsLight" type="Color" displayName="Totvs-light">#0a728cff</Property>
 		<Property name="totvsLighter" type="Color" displayName="Totvs-lighter">#2ca8c7ff</Property>
@@ -528,7 +531,7 @@ _Disabled Item]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$totvs</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorMedium</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
@@ -536,7 +539,7 @@ _Disabled Item]]></Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
 			<Property name="strokeColor" displayName="Border Color" type="Color"><E>$$strokeColor</E></Property>
-			<Property name="activeColor" displayName="Active Color" type="Color">#66afe9ff</Property>
+			<Property name="activeColor" displayName="Active Color" type="Color">#totvs</Property>
 			<Property name="strokeStyle" displayName="Border Style" type="StrokeStyle">1|</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Style">
@@ -645,7 +648,7 @@ _Disabled Item]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[Checkbox]]></Property>
 			<Property name="textFont" displayName="Text Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$totvs</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorDark</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
@@ -656,7 +659,7 @@ _Disabled Item]]></Property>
 			<Property name="checked" displayName="Checked" type="Bool">false</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
-			<Property name="strokeColor" displayName="Border Color" type="Color"><E>$$strokeColor</E></Property>
+			<Property name="strokeColor" displayName="Border Color" type="Color"><E>$$strokeColorDark</E></Property>
 			<Property name="strokeStyle" displayName="Border Style" type="StrokeStyle">1|</Property>
 		</PropertyGroup>
 	</Properties>
@@ -705,7 +708,7 @@ _Disabled Item]]></Property>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText"><![CDATA[Radio]]></Property>
 			<Property name="textFont" displayName="Text Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$totvs</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorDark</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Background">
@@ -716,7 +719,7 @@ _Disabled Item]]></Property>
 			<Property name="checked" displayName="Selected" type="Bool">false</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
-			<Property name="strokeColor" displayName="Border Color" type="Color"><E>$$strokeColor</E></Property>
+			<Property name="strokeColor" displayName="Border Color" type="Color"><E>$$strokeColorDark</E></Property>
 			<Property name="strokeStyle" displayName="Border Style" type="StrokeStyle">1|</Property>
 		</PropertyGroup>
 	</Properties>
@@ -1198,9 +1201,9 @@ _Disabled Item]]></Property>
 		</PropertyGroup>
 
 		<PropertyGroup name="Background">
-			<Property name="fillColor" displayName="Background Color" type="Color">#ffffff00</Property>
-			<Property name="stripeColor" displayName="Stripe Color" type="Color">#f9f9f9ff</Property>
-			<Property name="striped" displayName="Striped Rows" type="Bool">false</Property>
+			<Property name="fillColor" displayName="Background Color" type="Color"><E>$$totvsDarker</E></Property>
+			<Property name="stripeColor" displayName="Stripe Color" type="Color">#ddddddff</Property>
+			<Property name="striped" displayName="Striped Rows" type="Bool">true</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
 			<Property name="strokeColor" displayName="Border Color" type="Color">#ddddddff</Property>
@@ -1209,12 +1212,12 @@ _Disabled Item]]></Property>
 			<Property name="topBorder" displayName="Border Top" type="Bool">false</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Text">
-			<Property name="contentText" displayName="Text Content" type="PlainText" p:editInfo="({targetName: 'content', bound: Bound.fromBox($box, 0, 5), font: $textFont, align: new Alignment(0, 0), multi: true})"><![CDATA[Title | Director | Year
-The Wizard of Oz | Victor Fleming | 1939
-The Third Man | Carol Reed | 1949
-Citizen Kane | Orson Welles | 1941]]></Property>
+			<Property name="contentText" displayName="Text Content" type="PlainText" p:editInfo="({targetName: 'content', bound: Bound.fromBox($box, 0, 5), font: $textFont, align: new Alignment(0, 0), multi: true})"><![CDATA[Code | Description | Status
+000001 | John Doe | Ativo
+000002 | Jane Doe | Inativo
+000003 | Jim Doe | Ativo]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorMedium</E></Property>
+			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorLight</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 			<Property name="header" displayName="Header" type="Bool">true</Property>
 		</PropertyGroup>
@@ -1323,6 +1326,118 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 		</foreignObject>
 	</p:Content>
 </Shape>
+<Shape id="legend_black" displayName="Legend Black" icon="Icons/legend_black.png">
+        <Properties>
+            <PropertyGroup>
+                <Property name="box" type="Dimension" p:lockRatio="true">15,15</Property>
+                <Property name="imageData" type="ImageData"><![CDATA[15,15,data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAACXBIWXMAAC4jAAAuIwF4pT92AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA39JREFUeNrUmr9S6kAUxtcU0OhcZqioSGUl4y1opDEvwMgbmM5SHgHfgNaO21Dj8ALYQKMzMNBgFRutnJHRigb3yz1xwuZsCIRA+GZ2cMgffvvl7NndE48Wi4WIo5ubm7/yw5INn6Zsl8xpM9mGsjmy9dDu7++dOL97tAm4hAWgTa244W+PZGvK1pGd+EwUnIAbsl2L7WlGHWiu04HI4BK6TtB/RDJCB2wJ39kKuATO4XFqYvdX7+/v4u3tTXx9fYnv7++lY/l8XpycnIhCoeD+vUL/ZKuvcj8UnAZeT+fyx8eHGI/HwnEcMZ/PI9mKDpimKUqlkjg+Pg6L/1rYANaCh0EDeDAYuA7H0enpqSiXy7oOIHQsCT+MDB4GDWC4vC1lMhkX/uzsTAdvcmETAKeYdlRohEK323XdTkIIH8uy3I4wYWOp8AZzj44KDdh2u50YNIRxAmOYsXJO2UxowSnlXXJORx18cQRjNL91K9ksFtw3uSxpV9B++H6/zx1q6RwPTC4YiEmGh04vLy9iMpmoXxelufYSOLl9zeXofenp6Yl70g3VcZtLe/sUoJ+fnznXa1pwuB13ctmG8MQZ111WgyabonpBWoR4V3TlOW5xOTUtmk6n3MxuGbRzWVrl7TL9RUmPDI8Lbvq/SUNsc/DqCsFQZ0qsp9MmxkwzsFZRNwFplSEOVIcKnjtU8E+DdhlLG9u0KZvNsqEyVDezaRNjpmPQNu1XKCGkTQzT0KBNcaAGkhZhL8qoFwAPOTkt4DOULAwquoz8R1CsSYOw42fAO/483vQfQYEGxZp9CwYy5YqWH7yjpkUUaZiLdiaMM+bJv8oI6f2CU7El4Drg9yVNcajBTflN1XWUxfYxUOE0kwIfpcGtADi5bnM93+VsirF1cXHBHaprF1lUVH9QR3a1Wt0JPKBhFKM7tWrLLbJsNT168ElmGoSHBvpBQjdWLmspZGpqvAMeN65UKlvNNsgeMEUTHiMufKGNCvtesSZOGQOdh8uaXO1BW7pXKqtepeQI/lxXbULdAyWEqDVGZCmvhTw5jDM77D1Q1JdXiLHbsPPQCV0FDOtpDO6IK887LqbXBvcXYWi6LSY0Ph/F/7dtwygnr/1mmUq9jS124BX3808uiYD7OlCjEX+1weUzWh+1vLXHujqK+08IvjBCM4VSGfNvt2ib2IsaDmH6EWAA60WwkaWhle4AAAAASUVORK5CYII=]]></Property>
+                <Property name="withBlur" type="Bool" displayName="With Shadow">false</Property>
+            </PropertyGroup>
+            <PropertyGroup name="Background">
+                <Property name="fillColor" displayName="Background Color" type="Color">#ffffff00</Property>
+                <Property name="strokeColor" displayName="Border Color" type="Color">#000000ff</Property>
+                <Property name="strokeStyle" displayName="Border Style" type="StrokeStyle">0|</Property>
+            </PropertyGroup>
+        </Properties>
+        <Behaviors>
+            <For ref="imageContainer">
+                <Scale>
+                    <Arg>$box.w / $imageData.w</Arg>
+                    <Arg>$box.h / $imageData.h</Arg>
+                </Scale>
+            </For>
+            <For ref="bgRect">
+                <Box>$box.narrowed(0 - $strokeStyle.w)</Box>
+                <StrokeColor>$strokeColor</StrokeColor>
+                <StrokeStyle>$strokeStyle</StrokeStyle>
+                <Fill>$fillColor</Fill>
+                <Transform>"translate(" + [0 - $strokeStyle.w / 2, 0 - $strokeStyle.w / 2] + ")"</Transform>
+            </For>
+            <For ref="image">
+                <Image>$imageData</Image>
+            </For>
+            <For ref="bgCopy">
+                <ApplyFilter>$withBlur</ApplyFilter>
+                <Visibility>$withBlur</Visibility>
+            </For>
+        </Behaviors>
+        <Actions>
+            <Action id="toOriginalSize" displayName="To Original Size">
+                <Impl>
+                    <![CDATA[
+                        var data = this.getProperty("imageData");
+                        this.setProperty("box", new Dimension(data.w, data.h));
+                    ]]>
+                    </Impl>
+            </Action>
+            <Action id="fixRatioW" displayName="Correct Ratio by Width">
+                <Impl>
+                    <![CDATA[
+                        var data = this.getProperty("imageData");
+                        var box = this.getProperty("box");
+                        var h = Math.round(box.w * data.h / data.w);
+                        this.setProperty("box", new Dimension(box.w, h));
+                    ]]>
+                    </Impl>
+            </Action>
+            <Action id="fixRatioH" displayName="Correct Ratio by Height">
+                <Impl>
+                    <![CDATA[
+                        var data = this.getProperty("imageData");
+                        var box = this.getProperty("box");
+                        var w = Math.round(box.h * data.w / data.h);
+                        this.setProperty("box", new Dimension(w, box.h));
+                    ]]>
+                    </Impl>
+            </Action>
+            <Action id="selectExternalFile" displayName="Load Linked Image...">
+                <Impl>
+                    <![CDATA[
+                        var thiz = this;
+                        ImageData.prompt(function(data) {
+                            if (!data) return;
+                            thiz.setProperty("imageData", data);
+                            thiz.setProperty("box", new Dimension(data.w, data.h));
+                            if (data.data.match(/\.png$/)) {
+                                thiz.setProperty("fillColor", Color.fromString("#ffffff00"));
+                            }
+                        });
+                    ]]>
+                    </Impl>
+            </Action>
+            <Action id="selectExternalFileEmbedded" displayName="Load Embedded Image...">
+                <Impl>
+                    <![CDATA[
+                        var thiz = this;
+                        ImageData.prompt(function(data) {
+                            if (!data) return;
+                            thiz.setProperty("imageData", data);
+                            thiz.setProperty("box", new Dimension(data.w, data.h));
+                            if (data.data.match(/\.png$/)) {
+                                thiz.setProperty("fillColor", Color.fromString("#ffffff00"));
+                            }
+                        }, "embedded");
+                    ]]>
+                    </Impl>
+            </Action>
+        </Actions>
+        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="imageShading" height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198">
+                    <feGaussianBlur stdDeviation="1.3325" in="SourceAlpha"/>
+                </filter>
+                <g id="container">
+                    <rect id="bgRect" style="fill: none; stroke: none;"/>
+                    <g id="imageContainer">
+                        <image id="image" x="0" y="0" rx="46" ry="46"/>
+                    </g>
+                </g>
+            </defs>
+            <use xlink:href="#container" id="bgCopy" transform="translate(1, 1)" p:filter="url(#imageShading)" style=" opacity:0.6;"/>
+            <use xlink:href="#container"/>
+        </p:Content>
+</Shape>
+
 
 <Shape id="Well" displayName="Well" icon="Icons/Well.png">
 	<Properties>
@@ -1602,13 +1717,13 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 <Shape id="Breadcrumbs" displayName="Breadcrumbs" icon="Icons/Breadcrumbs.png">
 	<Properties>
 		<PropertyGroup>
-			<Property name="box" type="Dimension">800,36</Property>
+			<Property name="box" type="Dimension">1024,50</Property>
 			<Property name="radius" displayName="Corner Radius" type="Handle" p:lockY="true" p:minX="0" p:maxX="$box.h / 2" p:noScale="true">4,0</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Text">
 			<Property name="textContent" displayName="Text Content" type="PlainText" p:editInfo="({targetName: 'text', bound: Bound.fromBox($box, 15, 8), font: $textFont, align: new Alignment(0, 1), multi: false})"><![CDATA[Home / Library / Data]]></Property>
-			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
-			<Property name="linkColor" displayName="Link Color" type="Color"><E>$$brandPrimary</E></Property>
+			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFontTitle</E></Property>
+			<Property name="linkColor" displayName="Link Color" type="Color"><E>$$totvsLight</E></Property>
 			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$totvsLight</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">0,1</Property>
 		</PropertyGroup>
@@ -1700,3 +1815,4 @@ Citizen Kane | Orson Welles | 1941]]></Property>
 	</p:Content>
 </Shape>
 </Shapes>
+ 
