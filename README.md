@@ -9,7 +9,7 @@ UI components from Protheus front-end framework as a Pencil stencil collection
 1. Download the zip for the [latest release](https://github.com/renanbrando/Protheus-Pencil-Stencils/releases/latest). (Make sure you grab the protheus-pencil-stencils-vx.x.x.zip_ file, **not** the source code zip).
 2. In Pencil, install the .zip via _Tools_ > _Install new collection..._
 
-### Updating
+## Updating
 Right-click on the collection in Pencil's sidebar and choose _Uninstall this collection_ before repeating the installation steps.
 
 ## Notes
