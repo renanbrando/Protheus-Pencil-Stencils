@@ -3,7 +3,7 @@
 UI components from Protheus front-end framework as a Pencil stencil collection
 
 ## Sample
-![Protheus](Icons/protheus_sample.png)
+![Protheus](/Icons/protheus_sample.PNG)
 
 ## Installation
 1. Download the zip for the [latest release](https://github.com/renanbrando/Protheus-Pencil-Stencils/releases/latest). (Make sure you grab the protheus-pencil-stencils-vx.x.x.zip_ file, **not** the source code zip).
