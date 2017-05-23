@@ -391,13 +391,13 @@ url="http://www.totvs.com">
 <Shape id="dropdown" displayName="Dropdown" icon="Icons/Dropdown.png">
 	<Properties>
 		<PropertyGroup>
-			<Property name="box" type="Dimension">172,132</Property>
+			<Property name="box" type="Dimension">172,155</Property>
 			<Property name="shadow" displayName="Shadow" type="Bool">true</Property>
 		</PropertyGroup>
 
 		<PropertyGroup name="Background">
 			<Property name="fillColor" displayName="Sheet Color" type="Color">#ffffffff</Property>
-			<Property name="selectedColor" displayName="Selected Color" type="Color">#f5f5f5ff</Property>
+			<Property name="selectedColor" displayName="Selected Color" type="Color">#6E7D81</Property>
 		</PropertyGroup>
 		<PropertyGroup name="Border">
 			<Property name="strokeColor" displayName="Border Color" type="Color">#00000026</Property>
@@ -407,9 +407,11 @@ url="http://www.totvs.com">
 			<Property name="contentText" displayName="Text Content" type="PlainText" p:editInfo="({targetName: 'content', bound: Bound.fromBox($box, 0, 5), font: $textFont, align: new Alignment(0, 0), multi: true})"><![CDATA[#Dropdown header
 Selected Item*
 Another Item
+:Subitem
 --
 _Disabled Item]]></Property>
 			<Property name="textFont" displayName="Default Font" type="Font"><E>$$textFont</E></Property>
+			<Property name="textColorLight" displayName="Selected Color" type="Color"><E>$$textColorLight</E></Property>
 			<Property name="textColorMedium" displayName="Text Color" type="Color"><E>$$textColorMedium</E></Property>
 			<Property name="textAlign" displayName="Text Alignment" type="Alignment">1,1</Property>
 		</PropertyGroup>
@@ -459,11 +461,14 @@ _Disabled Item]]></Property>
 							css.set("color", collection.lighten($textColorMedium, 28).toRGBString());
 						} else if (text.match(/^#(.*)/)) {	// Header item
 							text = RegExp.$1;
-							css.set("color", collection.lighten($textColorMedium, 28).toRGBString());
 							css.set("font-size", ($textFont.getPixelHeight() * 0.86) + "px");
 						} else if (text.match(/(.*)\*$/)) {	// Selected item
 							text = RegExp.$1;
 							css.set("background", $selectedColor.toRGBString());
+							css.set("color", collection.lighten($textColorLight, 28).toRGBString());
+						} else if (text.match(/^:(.*)/)) {	// Subitem item
+							text = RegExp.$1;
+							css.set("padding", "4px 30px");
 						}
 					}
 
@@ -478,7 +483,6 @@ _Disabled Item]]></Property>
 				Dom.newDOMFragment(specs);
 				]]>
 			</DomContent>
-
 			<Color>$textColorMedium</Color>
 		</For>
 	</Behaviors>
